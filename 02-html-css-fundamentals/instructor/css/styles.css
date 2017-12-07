@@ -8,18 +8,81 @@
 /* BASIC SELECTORS */
 
 /* Tag selectors */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
 
+#super-specific {
+  color: brown;
+}
+
+.yellow {
+  color: yellow;
+}
+
+h1 {
+  color: tomato;
+  color: black;
+}
+
+p {
+  color: green;
+}
 
 /* Class selectors */
+.title {
+  color: darkgoldenrod;
+  background-color: #000000;
+}
 
+.faded {
+  opacity: 0.5;
+}
 
 /* ID selectors */
-
+#hero-unit {
+  color: blue;
+  font-size: 20px;
+}
 
 
 /* ADVANCED SELECTORS */
 
 /* Combining selectors */
+article h1 {
+  color: red;
+}
 
+.post > h1 {
+  color: orange;
+}
+
+h1 article {
+  background-color: #f2f2f2;
+}
 
 /* Pseudo-selectors */
+nav li {
+  background-color: purple;
+}
+
+nav li:hover {
+  background-color: pink;
+}
+
+nav li a {
+  text-decoration: none;
+}
+
+nav li a:visited {
+  border: 3px solid black;
+}
+
+nav li a:active {
+  color: red;
+}
+
+/* typically on input fields but can access the focus state on tabbing to a link */
+nav li a:focus {
+
+}
