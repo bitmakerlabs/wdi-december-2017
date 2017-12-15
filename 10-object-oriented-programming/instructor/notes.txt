@@ -1,0 +1,25 @@
+Advantages of Objects
+
+1) Encapsulation
+  - Classify Concepts
+
+2) Information Hiding
+  - State is "private" by default
+  - Must invoke behaviour to access state
+  - Invoke a behaviour by "passing a message"
+  - NoMethodError if object doesn't know how to do it
+
+3) Abstraction
+  - Internal of the object is irrelevant
+
+
+Class vs Instance
+
+- A Class is like a blueprint
+- Instances can evolve independently
+
+Things to Memorize/Understand:
+
+  - Difference between a Class and an Instance
+  - What is an "Instance Variable"
+  - What is an "Instance Method"
