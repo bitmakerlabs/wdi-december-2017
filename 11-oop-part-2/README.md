@@ -23,3 +23,26 @@ Today we'll be going further in depth into Object Oriented Programming to see ho
 ## Slides
 
 * [Slides](http://bitmakerlabs.s3.amazonaws.com/slides/cohort9/Object-Oriented%20Programming.pdf) - These are old slides and are for Reference Only
+
+
+
+sarah = Person.new
+sarah.talk('politics')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
