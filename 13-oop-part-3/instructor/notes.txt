@@ -1,0 +1,5 @@
+
+Object   | State                  | Behaviour
+---------+------------------------+-----------------------------------
+Instance | Instance Variables (@) | Instance Method (def method_name)
+Class    | Class Variables (@@)   | Class Method (def self.method_name)
