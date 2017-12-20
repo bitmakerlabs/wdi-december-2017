@@ -1,0 +1,26 @@
+MUST HAVE
+- As a user, I should be able to add a new contact
+- As a user, I should be able to see a list of contacts
+- As a user, I should be able to find a contact
+- As a user, I should be able to see more information about a contact
+
+SHOULD HAVE
+- As a user, I should be able to edit a contact
+- As a user, I should be able to delete a contact
+- As a user, I should be able to nickname a contact
+
+COULD HAVE
+- As a user, I should be able to search for a contact
+- As a user, I should be able to sort the list of contacts
+- As a user, I should be able to add a photo to a contact
+- As a user, I should be able to group contacts
+- As a user, I should be able to favourite a contact
+
+WONT HAVE
+- As a user, I should be able to 'poke' a contact
+- As a user, I should be able to email a contact
+- As a user, I should be able to call a contact
+- As a user, I should be able to text a contact
+- As a user, I should be able to skype a contact
+- As a user, I should be able to export a contact list
+- As a user, I should be able to import contacts

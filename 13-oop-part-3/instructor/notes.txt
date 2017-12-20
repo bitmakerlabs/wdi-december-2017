@@ -2,4 +2,6 @@
 Object   | State                  | Behaviour
 ---------+------------------------+-----------------------------------
 Instance | Instance Variables (@) | Instance Method (def method_name)
+         |                        | Can access instance variables AND class variables
 Class    | Class Variables (@@)   | Class Method (def self.method_name)
+         |                        | CANNOT access instance variables, ONLY access class variables
