@@ -1,4 +1,5 @@
 require 'sinatra'
+require_relative 'recipe'
 
 get '/' do
   redirect to('/recipes')
@@ -18,25 +19,16 @@ end
 
 get '/recipes' do
 
-  @recipes = {
-    1 => 'BBQ Ribs',
-    2 => 'Avocado Sushi',
-    3 => 'Gluten Free Cookies'
-  }
+  # .all is only OK for small number of items
+  @recipes = Recipe.all
 
   erb :recipes
 end
 
 get '/recipes/:id' do
 
-  recipes = {
-    1 => 'BBQ Ribs',
-    2 => 'Avocado Sushi',
-    3 => 'Gluten Free Cookies'
-  }
-
   id = params[:id].to_i
-  @name = recipes[id]
+  @recipe = Recipe.find(id)
 
   erb :recipe
 end
