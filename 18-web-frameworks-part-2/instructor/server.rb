@@ -27,14 +27,16 @@ get '/recipes' do
   erb :recipes
 end
 
-get '/recipes/1' do
-  erb :recipe_1
-end
+get '/recipes/:id' do
 
-get '/recipes/2' do
-  erb :recipe_2
-end
+  recipes = {
+    1 => 'BBQ Ribs',
+    2 => 'Avocado Sushi',
+    3 => 'Gluten Free Cookies'
+  }
 
-get '/recipes/3' do
-  erb :recipe_3
+  id = params[:id].to_i
+  @name = recipes[id]
+
+  erb :recipe
 end
