@@ -11,7 +11,13 @@ get '/films' do
 end
 
 post '/films' do
-  "POST request: #{params}"
+  Film.create(title: params[:title], description: params[:description],
+  rating: params[:rating], country: params[:country], available: params[:available]
+  )
+
+  # tell the server to send a new GET request to itself
+  # to the root URL ('/')
+  redirect to('/')
 end
 
 put '/films' do

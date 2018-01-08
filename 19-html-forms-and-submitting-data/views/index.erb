@@ -1,98 +1,109 @@
-<h2>Film Library</h2>
-<ul>
-  <% Film.all.each do |film| %>
-    <li><%= film.title %></li>
-  <% end %>
-</ul>
+<html>
+<head></head>
 
-<h2>New Film</h2>
-<form class="new-film" action="/films" method="post">
-  <div>
-    <!-- input type: text -->
-    <label for="film-title">Title: </label>
-    <input id="film-title" type="text" name="title" placeholder="e.g. Moonlight">
-  </div>
+<body>
 
-  <div>
-    <!-- input types: date / time / email / tel / url / color / range / number / search -->
-    <!-- <input type="date" name="name" value="">
-    <input type="time" name="name" value="">
-    <input type="email" name="name" value="">
-    <input type="tel" name="name" value="">
-    <input type="url" name="name" value="">
-    <input type="search" name="name" value="">
-    <input type="number" name="name" value="">
-    <input type="range" name="name" value="">
-    <input type="color" name="name" value=""> -->
-  </div>
+  <h2>Film Library</h2>
+  <ul>
+    <% Film.all.each do |film| %>
+      <li><%= film.title %></li>
+    <% end %>
+  </ul>
 
-  <div>
-    <!-- textarea -->
-    <label for="film-description">Description:</label>
-    <textarea id="film-description" name="description" placeholder="e.g. once upon a time..."></textarea>
-  </div>
+  <h2>New Film</h2>
+  <!-- post, get, put, patch, delete  -->
+  <form class="new-film" action="/films" method="post">
+    <!-- <input type="hidden" name="_method" value="delete"> -->
 
-  <div>
-  <!-- input radio -->
-  <fieldset>
-    <legend>Rating</legend>
+    <div>
+      <!-- input type: text -->
+      <label for="film-title">Title: </label>
+      <input id="film-title" type="text" name="title" placeholder="e.g. Moonlight">
+    </div>
 
-    <label for="rating-1">
-      <span>1 star</span>
-      <input id="rating-1" type="radio" name="rating" value="1">
-    </label>
+    <div>
+      <!-- input types: date / time / email / tel / url / color / range / number / search -->
+      <!-- <input type="date" name="name" value="">
+      <input type="time" name="name" value="">
+      <input type="email" name="name" value="">
+      <input type="tel" name="name" value="">
+      <input type="url" name="name" value="">
+      <input type="search" name="name" value="">
+      <input type="number" name="name" value="">
+      <input type="range" name="name" value="">
+      <input type="color" name="name" value=""> -->
+    </div>
 
-    <label for="rating-2">
-      <span>2 stars</span>
-      <input id="rating-2" type="radio" name="rating" value="2">
-    </label>
+    <div>
+      <!-- textarea -->
+      <label for="film-description">Description:</label>
+      <textarea id="film-description" name="description" placeholder="e.g. once upon a time..."></textarea>
+    </div>
 
-    <label for="rating-3">
-      <span>3 stars</span>
-      <input id="rating-3" type="radio" name="rating" value="3">
-    </label>
+    <div>
+    <!-- input radio -->
+    <fieldset>
+      <legend>Rating</legend>
 
-  </fieldset>
-  </div>
+      <label for="rating-1">
+        <span>1 star</span>
+        <input id="rating-1" type="radio" name="rating" value="1">
+      </label>
 
-  <div>
-  <!-- input checkbox -->
-    <label for="film-available">
-      <span>In library?</span>
-      <input id="film-available" type="checkbox" name="available" value="1">
-    </label>
-  </div>
+      <label for="rating-2">
+        <span>2 stars</span>
+        <input id="rating-2" type="radio" name="rating" value="2">
+      </label>
 
+      <label for="rating-3">
+        <span>3 stars</span>
+        <input id="rating-3" type="radio" name="rating" value="3">
+      </label>
 
-  <div>
-    <!-- select / option -->
-    <label for="film-country">Country:</label>
-    <select name="country" id="film-country">
-      <option value="">Please select a country</option>
-      <option value="CA">Canada</option>
-      <option value="US">United States</option>
-      <option value="JP">Japan</option>
-      <option value="GB">United Kingdom</option>
-    </select>
-  </div>
+    </fieldset>
+    </div>
+
+    <div>
+    <!-- input checkbox -->
+      <label for="film-available">
+        <span>In library?</span>
+        <input id="film-available" type="checkbox" name="available" value="1">
+      </label>
+    </div>
 
 
-  <div>
-    <!-- file -->
-    <!-- <input type="file"> -->
-  </div>
+    <div>
+      <!-- select / option -->
+      <label for="film-country">Country:</label>
+      <select name="country" id="film-country">
+        <option value="">Please select a country</option>
+        <option value="CA">Canada</option>
+        <option value="US">United States</option>
+        <option value="JP">Japan</option>
+        <option value="GB">United Kingdom</option>
+      </select>
+    </div>
 
-  <!-- hidden -->
-  <!-- <input type="hidden" name="account_number" value="123345789"> -->
 
-  <div>
-    <!-- input submit / button -->
-    <!-- <input type="submit" value="go make a film!"> -->
+    <div>
+      <!-- file -->
+      <!-- <input type="file"> -->
+    </div>
 
-    <button type="submit">
-      <span>go make a film!</span>
-      <img src="http://placebear.com/100/100" alt="a bear">
-    </button>
-  </div>
+    <!-- hidden -->
+    <!-- <input type="hidden" name="account_number" value="123345789"> -->
 
-</form>
+    <div>
+      <!-- input submit / button -->
+      <!-- <input type="submit" value="go make a film!"> -->
+
+      <button type="submit">
+        <span>go make a film!</span>
+        <img src="http://placebear.com/100/100" alt="a bear">
+      </button>
+    </div>
+
+  </form>
+
+</body>
+</html>
