@@ -1,0 +1,31 @@
+<style type="text/css">
+  label {
+    margin-top: 20px;
+    width: 200px;
+    display: inline-block;
+  }
+
+</style>
+
+<h1>New Product</h1>
+
+<%= form_for @product do |f| %>
+
+  <%= f.label      :name %>
+  <%= f.text_field :name %>
+  <br>
+
+  <%= f.label      :description %>
+  <%= f.text_area :description %>
+  <br>
+
+  <%= f.label      :cost %>
+  <%= f.text_field :cost %>
+  <br>
+
+  <%= f.label      :img_url %>
+  <%= f.text_field :img_url %>
+  <br>
+  <%= f.submit %>
+
+<% end %>
