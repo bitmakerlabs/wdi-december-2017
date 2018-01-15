@@ -1,0 +1,48 @@
+<h1>Create a recipe</h1>
+
+<form class="" action="/recipes" method="post">
+  Recipe title:<input type="text" name="title" value="">
+
+  <p>
+    <input type="submit" name="" value="Submit">
+  </p>
+</form>
+
+<hr>
+
+form_tag below here ----
+<%= form_tag '/recipes' do %>
+  Recipe title:<%= text_field_tag('title') %>
+  Quantity:<%= number_field_tag 'quantity'%>
+
+  <p>
+    <%= submit_tag %>
+  </p>
+<% end %>
+
+<hr>
+
+form_for below here ----
+
+<%= form_for Recipe.new do |form_helper| %>
+  Recipe title:<%= form_helper.text_field :title %>
+  Quantity:<%= form_helper.number_field :quantity %>
+
+  <p>
+    <%= form_helper.submit %>
+  </p>
+
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  -->
