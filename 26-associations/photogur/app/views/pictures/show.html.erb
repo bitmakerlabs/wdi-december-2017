@@ -4,6 +4,18 @@
   <p> <%= @picture.description %> </p>
   <%= image_tag @picture.url %>
 </section>
+
+<h2>Tags:</h2>
+<section>
+  <ul>
+    <% @tags.each do |tag| %>
+    <li>
+      <%= tag.name %>
+    </li>
+    <% end %>
+  </ul>
+</section>
+
 <h2>Comments:</h2>
 <section>
   <ul>
