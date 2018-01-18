@@ -18,7 +18,11 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    # Cut the wristband
+    session[:user_id] = nil
+    redirect_to root_url
   end
+
 end
 
 # 3 Magic Hashes

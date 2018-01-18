@@ -4,16 +4,20 @@
   end
 %>
 
-<p>
-  <% if user_is_logged_in %>
-    Hello username
-  <% else %>
-    Please login
-  <% end %>
-</p>
 
-<p><%= link_to 'New User', new_users_path %></p>
-<p><%= link_to 'Login', new_sessions_path %></p>
+<% if user_is_logged_in %>
+    Hello username
+
+    <p><%= link_to 'Logout', sessions_path, method: :delete %></p>
+<% else %>
+    Please login
+
+    <p><%= link_to 'New User', new_users_path %></p>
+    <p><%= link_to 'Login', new_sessions_path %></p>
+<% end %>
+
+
+
 
 <h1>Welcome to Findr</h1>
 
