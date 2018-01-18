@@ -9,6 +9,25 @@
   </head>
 
   <body>
+
+    <%
+      def user_is_logged_in
+        session[:user_id]
+      end
+    %>
+
+    <% if user_is_logged_in %>
+        Hello username
+
+        <p><%= link_to 'Logout', sessions_path, method: :delete %></p>
+    <% else %>
+        Please login
+
+        <p><%= link_to 'New User', new_users_path %></p>
+        <p><%= link_to 'Login', new_sessions_path %></p>
+    <% end %>
+
+
     <%= yield %>
   </body>
 </html>
