@@ -1,3 +1,17 @@
+<%
+  def user_is_logged_in
+    false
+  end
+%>
+
+<p>
+  <% if user_is_logged_in %>
+    Hello username
+  <% else %>
+    Please login
+  <% end %>
+</p>
+
 <p><%= link_to 'New User', new_users_path %></p>
 <p><%= link_to 'Login', new_sessions_path %></p>
 
