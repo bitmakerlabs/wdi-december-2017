@@ -1,14 +1,16 @@
 require 'minitest/autorun'
-require 'minitest/pride'
+
 require_relative '../contact'
 
 class TestContact < Minitest::Test
 
   def setup
+    # Code that runs before every test
     @contact = Contact.create('Grace', 'Hopper', 'grace@hopper.com', 'computer scientist')
   end
 
   def teardown
+    # Code that runs after every test
     Contact.delete_all
   end
 

@@ -11,6 +11,12 @@ class RestaurantTest < ActiveSupport::TestCase
   def test_restaurant_is_invalid_without_closing_hour
   end
 
+  def test_restaurant_belongs_to_category
+  end
+
+  def test_restaurant_has_many_reservations
+  end
+
   def test_restaurant_is_available_when_empty_during_opening_hours
   end
 
@@ -37,5 +43,4 @@ class RestaurantTest < ActiveSupport::TestCase
 
   def test_restaurant_is_unavailable_past_closing_time
   end
-
 end
