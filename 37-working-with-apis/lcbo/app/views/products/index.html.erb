@@ -1,0 +1,10 @@
+<h1>Products</h1>
+
+<ul>
+  <% @results.each do |result| %>
+    <li>
+      <p><%= result["name"] %></p>
+      <%= image_tag(result["image_thumb_url"]) %>
+    </li>
+  <% end %>
+</ul>
