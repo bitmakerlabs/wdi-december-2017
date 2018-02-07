@@ -164,3 +164,28 @@ case_statement
 named_function
 sum 5, 6
 function_with_parameters 'first param', 'second param'
+
+
+
+puts '----' * 20
+
+items = ['shoe', 'hat', 'comb']
+
+notHappy = false
+items.each do |item|
+  superHappy = 5
+  puts notHappy
+  puts 'hello'
+end
+
+
+puts superHappy
+
+
+
+
+
+
+
+
+#
