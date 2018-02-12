@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
       colors = ['tomato', 'azure', 'green', 'orange', 'purple', 'chartreuse', 'gold', 'fuschia'];
 
   var container = document.querySelector('#container');
+  // Because we're creating elements dynamically, it's better for browser memory
+  // if we use a delegated event handler (listening for the event on a parent element)
+  // we'll only create _one_ event handler as opposed to an infinite amount.
+
+  // Bind a handler when to an element that doens't exist yet
 
   var boxMaker = document.querySelector('#box-maker');
 
@@ -23,8 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
       circle.innerHTML = count++;
 
+      // When we click on a circle, do something
+
       container.append(circle);
 
       console.log('link was clicked');
   });
+
 });
