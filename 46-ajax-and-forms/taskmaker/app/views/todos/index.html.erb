@@ -1,0 +1,20 @@
+<h1>Welcome to taskmaker</h1>
+
+<%= link_to "click me to create a new task", new_todo_path %>
+
+
+<h1>Form for new task</h1>
+<%= render partial: 'form'%>
+
+<h1>Task list::</h1>
+<% if @todos.any? %>
+    <ul id="my_list">        
+        <% @todos.each do |t| %>
+            <%= render partial:'todo', locals: {t:t} %>
+        <% end %>    
+    </ul>
+<% else %>
+    <p>Sorry no task!!</p>
+<% end %>
+
+
